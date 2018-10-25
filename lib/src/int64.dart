@@ -638,6 +638,11 @@ class Int64 implements IntX {
     }
   }
 
+  // TODO: Implement this
+  Int16 toInt16() {
+    return Int16.ZERO;
+  }
+
   /**
    * Returns an [Int32] containing the low 32 bits of this [Int64].
    */

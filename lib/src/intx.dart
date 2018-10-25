@@ -205,6 +205,14 @@ abstract class IntX implements Comparable<dynamic> {
   int toInt();
 
   /**
+   * Returns an Int16 representation of this integer.
+   *
+   * Narrower values are sign-extended and wider values have their high bits
+   * truncated.
+   */
+  Int16 toInt16();
+
+  /**
    * Returns an Int32 representation of this integer.
    *
    * Narrower values are sign-extended and wider values have their high bits
