@@ -200,6 +200,10 @@ class Int16 implements IntX {
     if (other is Int32) {
       return this.toInt32() * other;
     }
+    if (other is int) {
+      return (this.toInt64() * new Int64(other)).toInt16();
+    }
+
     // TODO(rice) - optimize
     return (this.toInt64() * other).toInt16();
   }

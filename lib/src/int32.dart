@@ -376,10 +376,12 @@ class Int32 implements IntX {
 
   double toDouble() => _i.toDouble();
   int toInt() => _i;
-  // TODO: Implement this
+
+  // TODO: Test this
   Int16 toInt16() {
-    return Int16.ZERO;
+    return new Int16(((_m & 0x3ff) << _BITS) | _l);
   }
+
   Int32 toInt32() => this;
   Int64 toInt64() => new Int64(_i);
 
