@@ -15,5 +15,6 @@
 library fixnum;
 
 part 'src/intx.dart';
+part 'src/int16.dart';
 part 'src/int32.dart';
 part 'src/int64.dart';

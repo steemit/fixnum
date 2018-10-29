@@ -205,6 +205,8 @@ class Int64 implements IntX {
       return new Int64(value);
     } else if (value is Int32) {
       return value.toInt64();
+    } else if (value is Int16) {
+      return value.toInt64();
     }
     throw new ArgumentError.value(value);
   }
@@ -636,6 +638,14 @@ class Int64 implements IntX {
     } else {
       return l + (4194304 * m) + (17592186044416 * h);
     }
+  }
+
+  // TODO: Verify this
+  /**
+   * Returns an [Int16] containing the low 16 bits of this [Int64].
+   */
+  Int16 toInt16() {
+    return new Int16(((_m & 0x3ffffff) << _BITS) | _l);
   }
 
   /**
